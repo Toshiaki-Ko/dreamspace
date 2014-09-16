@@ -28,7 +28,10 @@ gem 'spring',        group: :development
 
 #bootstrap
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 
+#暗号化
+gem 'bcrypt-ruby', '3.1.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -13,10 +13,12 @@
 
      <%= link_to "find stud", "#", class: "btn btn-lagrge btn-primary" %>
      <%= link_to "find mod", "#", class: "btn btn-lagrge btn-danger" %>
-
-    <h3>
-      ↓また登録していない方はこちら↓
-    </h3>
-    <%= link_to "Sign up Now", signup_path, class: "btn btn-lagrge btn-info" %>
+    <% if signed_in? %>
+      <% else %>
+      <h3>
+        ↓また登録していない方はこちら↓
+      </h3>
+      <%= link_to "Sign up Now", signup_path, class: "btn btn-lagrge btn-info" %>
+      <% end %>
   </div>
 </div>

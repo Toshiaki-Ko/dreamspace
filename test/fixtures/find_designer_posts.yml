@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  area: MyString
+  purpose: MyString
+  demand: MyText
+  user_id: 1
+
+two:
+  area: MyString
+  purpose: MyString
+  demand: MyText
+  user_id: 1

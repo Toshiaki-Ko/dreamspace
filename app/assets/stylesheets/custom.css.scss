@@ -171,3 +171,18 @@ input {
   @extend .control-group;
   @extend .error;
 }
+
+.btn-xlagrge {
+    padding: 0px 23px;
+    font-size: 16px; //change this to your desired size
+    line-height: normal;
+    margin: 10px;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.select_area {
+padding-left: 160px;
+position:fixed;
+}

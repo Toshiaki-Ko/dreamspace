@@ -1,0 +1,2 @@
+module FindDesignerPostsHelper
+end

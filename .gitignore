@@ -14,3 +14,21 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+.keep
+.env
+
+# Ignore application configuration
+/config/application.yml
+/db/*.csv
+/db/seeds.rb
+
+/public/uploads/person/image
+/vendor/assets/components

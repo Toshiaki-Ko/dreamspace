@@ -5,6 +5,7 @@ class FindDesignerPostsController < ApplicationController
   end
 
   def new
+    @find_designer_post = FindDesignerPost.new
   end
 
   def create

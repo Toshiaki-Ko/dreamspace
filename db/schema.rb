@@ -14,7 +14,9 @@
 ActiveRecord::Schema.define(version: 20140917080139) do
 
   create_table "find_designer_posts", force: true do |t|
+    t.string   "title"
     t.string   "area"
+    t.string   "prefecture"
     t.string   "purpose"
     t.text     "demand"
     t.integer  "user_id"

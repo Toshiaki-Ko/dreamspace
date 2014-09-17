@@ -1,13 +1,27 @@
+<% provide(:title, 'Sign up') %>
+<h1>登録ページ</h1>
 
-  <h1>Welcome to the Sample App</h1>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
 
-  <h2>
-    This is the home page for the
-    <a href="http://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
+      <%= f.label :name, "お名前" %>
+      <%= f.text_field :name %>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+      <%= f.label :email, "連絡先(Email)" %>
+      <%= f.text_field :email %>
 
+      <%= f.label :password, "パスワード" %>
+      <%= f.password_field :password %>
 
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+      <%= f.label :password_confirmation, "パスワード確認" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.label :introduction, "自己紹介" %>
+      <%= f.text_area :introduction , :size=>"30x8" %><br>
+
+      <%= f.submit "登録する", class: "btn btn-large btn-info" %>
+    <% end %>
+  </div>
+</div>

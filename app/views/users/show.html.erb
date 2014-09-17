@@ -1,0 +1,17 @@
+<% provide(:title, @user.name) %>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td>名前</td>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <td>連絡先</td>
+      <td><%= mail_to @user.email %></td>
+    </tr>
+    <tr>
+      <td>自己紹介</td>
+      <td><%= @user.introduction %></td>
+    </tr>
+  </tbody>
+</table>

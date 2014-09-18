@@ -1,5 +1,5 @@
 class FindDesignerPostsController < ApplicationController
-  before_action :signed_in_user
+  before_action :signed_in_user, only: [:edit, :update, :show]
   def index
     @find_designer_posts = FindDesignerPost.paginate(page: params[:page])
    # @find_designer_posts = FindDesignerPost.all
@@ -25,12 +25,23 @@ class FindDesignerPostsController < ApplicationController
   end
 
   def edit
+    @find_designer_post = FindDesignerPost.find(params[:id])
   end
 
   def update
+    @find_designer_post = FindDesignerPost.find(params[:id])
+    if @find_designer_post.update_attributes(find_designer_post_params)
+      flash[:success] = "更新しました★"
+      redirect_to @find_designer_post
+    else
+      render 'edit'
+    end
   end
 
-  def delete
+  def destroy
+      @find_designer_post = FindDesignerPost.find(params[:id])
+      @find_designer_post.destroy
+      redirect_to find_designer_posts_path
   end
 
 private
@@ -46,4 +57,10 @@ private
                                                 )
   end
 
+  def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "まずログインしてね〜"
+    end
+  end
 end

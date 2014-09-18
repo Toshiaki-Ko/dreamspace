@@ -1,37 +1,48 @@
 <table class="profile-form">
   <tbody>
+
     <tr>
       <th>タイトル</th>
-      <td><%= @find_designer_post.title %><td>
+      <td><%= @find_designer_post.title %></td>
     </tr>
+
     <tr>
       <th>投稿者</th>
       <td><%= @find_designer_post.user.name %></td>
     </tr>
+
     <tr class="introduction-myself">
       <th>間取り</th>
     　<td><%= @find_designer_post.area %></td>
     </tr>
+
     <tr>
       <th>都道府県</th>
       <td><%= @find_designer_post.prefecture %></td>
     </tr>
+
     <tr>
       <th>用途・目的</th>
       <td><%= @find_designer_post.purpose %></td>
     </tr>
+
     <tr>
       <th>要求</th>
-      <td><%= @find_designer_post.demand %></td>
+      <td><%= simple_format @find_designer_post.demand %></td>
     </tr>
 
-    </tr>
   </tbody>
 </table>
 
-<div class= "select_area">
-<%= link_to "デザインーを待っている\n入り口", 
-  find_designer_posts_path, class: "btn btn-xlagrge btn-primary" %>
-<%= link_to "モデル部屋を待っている\n入り口", "#", 
-  class: "btn btn-xlagrge btn-danger" %><br>
-</div>
+<br>
+<% if current_user?(@find_designer_post.user) %> 
+<%= link_to "一覧へ", 
+  find_designer_posts_path, class: "btn btn-xlagrge btn-primary btn-group" %>
+<%= link_to "編集する", edit_find_designer_post_path, 
+  class: "btn btn-xlagrge btn-success btn-group" %>
+<%= link_to "削除", @find_designer_post, method: :delete, data: { confirm: "本当に削除ですか" }, class: "btn btn-xlagrge btn-danger btn-group" %>
+<% else %>  
+<%= link_to "一覧へ", 
+  find_designer_posts_path, class: "btn btn-xlagrge btn-primary btn-group" %>
+<% end %>
+

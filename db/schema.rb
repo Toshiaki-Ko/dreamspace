@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917044722) do
+ActiveRecord::Schema.define(version: 20140917080139) do
+
+  create_table "find_designer_posts", force: true do |t|
+    t.string   "title"
+    t.string   "area"
+    t.string   "prefecture"
+    t.string   "purpose"
+    t.text     "demand"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "find_designer_posts", ["user_id", "created_at"], name: "index_find_designer_posts_on_user_id_and_created_at"
 
   create_table "users", force: true do |t|
     t.string   "name"

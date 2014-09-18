@@ -1,4 +1,3 @@
-<% provide(:title, 'Sign up') %>
 <h1>部屋をリフォーム(情報更新)</h1>
 
 <div class="row">
@@ -15,11 +14,11 @@
       <%= f.label :password, "パスワード" %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "パスワード確認" %>
-      <%= f.password_field :password_confirmation %>
-
       <%= f.label :introduction, "自己紹介" %>
-      <%= f.text_area :introduction , :size=>"30x8" %><br>
+      <%= f.text_area :introduction , :size=>"30x8" %>
+
+      <%= f.label :image %>
+      <%= f.file_field :image %><br>
 
       <%= f.submit "更新する", class: "btn btn-large btn-info" %>
     <% end %>

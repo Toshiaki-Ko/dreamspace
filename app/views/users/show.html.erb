@@ -1,17 +1,29 @@
 <% provide(:title, @user.name) %>
-<table class="table table-bordered">
+<table class="profile-form">
   <tbody>
     <tr>
-      <td>名前</td>
+      <th>名前</th>
       <td><%= @user.name %></td>
     </tr>
     <tr>
-      <td>連絡先</td>
+      <th>連絡先</th>
       <td><%= mail_to @user.email %></td>
     </tr>
-    <tr>
-      <td>自己紹介</td>
-      <td><%= @user.introduction %></td>
+    <tr class="introduction-myself">
+      <th>自己紹介</th>
+      <td><%= simple_format @user.introduction %></td>
+    </tr>
+    <tr class="posts-all-in-profile">
+      <th>投稿一覧</th>
+      <td>
+      <% if @find_designer_posts.any? %>
+      合計 <%= @find_designer_posts.count %> 件<br>
+       ここ教えて・・・・・
+      <% end %>
+      </td>
     </tr>
   </tbody>
 </table>
+<div class="show-profile-photo">
+  <%= image_tag("http://blogs.c.yimg.jp/res/blog-fa-8d/yw95112/folder/1022901/24/28826424/img_0", :size => '290x200') %>
+</div>

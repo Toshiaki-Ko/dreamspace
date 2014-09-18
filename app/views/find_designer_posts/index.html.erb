@@ -5,32 +5,29 @@
 	class: "btn btn-xlagrge btn-danger" %><br>
 </div>
 <br>
-<%= link_to "新規投稿", find_designer_posts_new_path, 
+<%= link_to "新規投稿", new_find_designer_post_path, 
 	class: "btn btn-xlagrge btn-default" %><br>
 <br>
 <div class= "post_index">
-<table>
-<tr>
-<th bgcolor="#EE0000"><font color="#FFFFFF">投稿No</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">タイトル</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">投稿者</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">部屋のタイプ</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">用途</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">要望</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">間取り・画像</font></th>
-</tr>
-<% @find_designer_posts = FindDesignerPost.all %>
-<% @find_designer_posts.each do |f| %>
-<tr>
-<td bgcolor="#99CC00" valign="center" width="50" height= "70"><%= f.id%></td>
-<td bgcolor="#99CC00" valign="center" width="100"height= "70"><%= f.title %></td>
-<td bgcolor="#FFFFFF" valign="center" width="150"height= "70"><%= f.user.name %></td>
-<td bgcolor="#FFFFFF" valign="center" width="70"height= "70"><%= f.area %></td>
-<td bgcolor="#99CC00" valign="center" width="100"height= "70"><%= f.purpose %></td>
-<td bgcolor="#FFFFFF" valign="center" width="200"height= "70"><%= f.demand %></td>
-<td bgcolor="#FFFFFF" valign="center" width="200"><% %></td>
-</tr>
-<tr>
-<% end %>
-</table>
+<%= will_paginate %>
+  <table>
+    <tr>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">投稿No</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">タイトル</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">投稿者</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">部屋のタイプ</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">用途</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">要望</font></th>
+    </tr>
+    <% @find_designer_posts = FindDesignerPost.all %>
+    <% @find_designer_posts.each do |f| %>
+    <tr>
+      <td bgcolor="#99CC00" valign="center" width="50" height= "70"><%= f.id%></td>
+      <td bgcolor="#99CC00" valign="center" width="200"height= "70"><%= link_to f.title , find_designer_post_path(:id => f.id) %></td>
+      <td bgcolor="#FFFFFF" valign="center" width="100"height= "70"><%= f.user.name %></td>
+      <td bgcolor="#FFFFFF" valign="center" width="70"height= "70"><%= f.area %></td>
+      <td bgcolor="#99CC00" valign="center" width="100"height= "70"><%= f.purpose %></td>
+      <td bgcolor="#FFFFFF" valign="center" width="400"height= "70"><%= f.demand %></td>
+    <% end %>
+  </table>
 </div>

@@ -30,7 +30,7 @@ textarea {
 }
 
 .hero-unit {
-padding: 100px;
+padding: 70px;
 margin-bottom: 30px;
 background-image: url(/images/toppage.jpeg);
 background-repeat: no-repeat;
@@ -131,23 +131,6 @@ footer ul li {
   margin-left: 30px;
 }
 
-.table {
-  font-size: 1.7em;
-  width: 700px;
-  height: 300px;
-  border: 3px solid green;
-  color: gray;
-  background-color: rgba(245,245,245,0.8);
-  margin-right: 120px;
-  margin-left: 80px;
-  margin-top: 80px;
-}
-
-.table tr td {
-    text-align: center;
-    padding: 40px;
-}
-
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -184,5 +167,49 @@ input {
 
 .select_area {
 padding-left: 160px;
+}
 
+.profile-form{
+width: 600px;
+border-collapse: separate;
+border-spacing: 0px;
+border-top: 1px solid #ccc;
+border-left: 1px solid #ccc;
+margin-top: 30px;
+margin-left: 20px;
+margin-right: 60px;
+
+}
+
+.profile-form th{
+width: 100px;
+padding:4px;
+text-align: center;
+vertical-align: top;
+color: #444;
+background-color: #feedf3;
+border-left: 3px double #999;
+border-top: 1px solid #fff;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+.profile-form td{
+padding:4px;
+background-color: rgba(245,245,245,0.3);
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+.posts-all-in-profile {
+  height: 20px;
+}
+
+.introduction-myself{
+  height: 20px;
+}
+
+.show-profile-photo {
+  border: 3px solid #ccc;
+  float: right;
 }

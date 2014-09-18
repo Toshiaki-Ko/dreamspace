@@ -6,11 +6,12 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user = User.find(params[:id])
+    @user = User.find(params[:id])
+    @find_designer_posts = @user.find_designer_posts
   end
 
    def create
-    @user = User.new(user_params)    # 実装は終わっていないことに注意!
+    @user = User.new(user_params)
     if @user.save
       sign_in @user
       flash[:success] = "登録成功♬"

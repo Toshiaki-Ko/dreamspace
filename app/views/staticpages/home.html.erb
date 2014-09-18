@@ -14,14 +14,10 @@
      <%= link_to "デザイナーを待っている\n入り口", find_designer_posts_path, class: "btn btn-lagrge btn-primary" %>
      <%= link_to "モデル部屋を待っている\n入り口", "#", class: "btn btn-lagrge btn-danger" %>
       <% else %>
-      <h3>
-        ↓ログイン↓
-      </h3>
-      <%= link_to "Sign in Now", signin_path, class: "btn btn-lagrge btn-info" %>
-      <h3>
-        ↓また登録していない方はこちら↓
-      </h3>
-      <%= link_to "Sign up Now", signup_path, class: "btn btn-lagrge btn-warning" %>
+        ↓ログイン↓<br>
+        <%= link_to "部屋を覗いてみる", signin_path, class: "btn btn-lagrge btn-info" %><br>
+        ↓また登録していない方はこちら↓<br>
+        <%= link_to "どりすぺに加入する", signup_path, class: "btn btn-lagrge btn-warning" %>
       <% end %>
   </div>
 </div>

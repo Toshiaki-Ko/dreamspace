@@ -1,7 +1,8 @@
 class FindDesignerPostsController < ApplicationController
   before_action :signed_in_user
   def index
-    @find_designer_posts = FindDesignerPost.all
+    @find_designer_posts = FindDesignerPost.paginate(page: params[:page])
+   # @find_designer_posts = FindDesignerPost.all
   end
 
   def new
@@ -9,9 +10,18 @@ class FindDesignerPostsController < ApplicationController
   end
 
   def create
+     @find_designer_post = FindDesignerPost.new(find_designer_post_params)
+    if @find_designer_post.save
+      flash[:success] = "投稿しました。"
+      redirect_to @find_designer_post
+    else
+      render 'new'
+    end
   end
 
   def show
+    @find_designer_post = FindDesignerPost.find(params[:id])
+    @user = @find_designer_post.user
   end
 
   def edit
@@ -24,21 +34,16 @@ class FindDesignerPostsController < ApplicationController
   end
 
 private
-  def user_params
-    params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :introduction)
-  end
 
-  def signed_in_user
-    unless signed_in?
-      store_location
-      redirect_to signin_url, notice: "まずログインしてね〜"
-    end
-  end
-
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(root_path) unless current_user?(@user)
+  def find_designer_post_params
+    params.require(:find_designer_post).permit( 
+                                                :user_id,
+                                                :title,
+                                                :area,
+                                                :prefecture,
+                                                :purpose,
+                                                :demand
+                                                )
   end
 
 end

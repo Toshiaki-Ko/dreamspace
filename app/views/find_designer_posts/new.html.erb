@@ -22,6 +22,8 @@
       <%= f.label :demand, "要求" %>
       <%= f.text_area :demand , :size=>"30x8" %>
 
+      <%= f.hidden_field :user_id, :value => current_user[:id] %>
+
       <%= f.submit "投稿する", class: "btn btn-large btn-info" %>
       <%= link_to "また今度", find_designer_posts_path, 
        class: "btn btn-large btn-danger" %><br>

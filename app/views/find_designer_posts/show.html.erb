@@ -1,0 +1,37 @@
+<table class="profile-form">
+  <tbody>
+    <tr>
+      <th>タイトル</th>
+      <td><%= @find_designer_post.title %><td>
+    </tr>
+    <tr>
+      <th>投稿者</th>
+      <td><%= @find_designer_post.user.name %></td>
+    </tr>
+    <tr class="introduction-myself">
+      <th>間取り</th>
+    　<td><%= @find_designer_post.area %></td>
+    </tr>
+    <tr>
+      <th>都道府県</th>
+      <td><%= @find_designer_post.prefecture %></td>
+    </tr>
+    <tr>
+      <th>用途・目的</th>
+      <td><%= @find_designer_post.purpose %></td>
+    </tr>
+    <tr>
+      <th>要求</th>
+      <td><%= @find_designer_post.demand %></td>
+    </tr>
+
+    </tr>
+  </tbody>
+</table>
+
+<div class= "select_area">
+<%= link_to "デザインーを待っている\n入り口", 
+  find_designer_posts_path, class: "btn btn-xlagrge btn-primary" %>
+<%= link_to "モデル部屋を待っている\n入り口", "#", 
+  class: "btn btn-xlagrge btn-danger" %><br>
+</div>

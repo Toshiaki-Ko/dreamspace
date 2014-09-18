@@ -32,6 +32,10 @@ gem 'sprockets', '2.11.0'
 
 #暗号化
 gem 'bcrypt-ruby', '3.1.2'
+
+#paginate
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -20,6 +20,8 @@
 
       <%= f.label :introduction, "自己紹介" %>
       <%= f.text_area :introduction , :size=>"30x8" %><br>
+      <%= f.label :image %>
+　　<%= f.file_field :image %>
 
       <%= f.submit "登録する", class: "btn btn-large btn-info" %>
     <% end %>

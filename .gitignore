@@ -31,4 +31,5 @@ doc/
 /db/seeds.rb
 
 /public/uploads/person/image
+/public/uploads/tmp
 /vendor/assets/components

@@ -17,9 +17,14 @@
       <%= f.label :introduction, "自己紹介" %>
       <%= f.text_area :introduction , :size=>"30x8" %>
 
-      <%= f.label :image %>
+      <div class="edit-profile-photo">
+        <%= image_tag @user.image.thumb.url, :size => '200x200' %><br>
+      </div>
+      <br>
+      <%= f.label :image, "joukino gazoukoushinsuru?" %>
       <%= f.file_field :image %><br>
 
+      <br>
       <%= f.submit "更新する", class: "btn btn-large btn-info" %>
     <% end %>
   </div>

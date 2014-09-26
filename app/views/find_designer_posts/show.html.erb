@@ -34,6 +34,11 @@
   </tbody>
 </table>
 
+<div class="show-profile-photo">
+  <%= image_tag @find_designer_post.fdpimage.thumb.url, :size => '200x200' %>
+</div>
+
+
 <br>
 <% if current_user?(@find_designer_post.user) %> 
 <%= link_to "一覧へ", 

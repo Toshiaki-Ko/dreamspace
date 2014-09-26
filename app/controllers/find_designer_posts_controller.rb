@@ -1,5 +1,6 @@
 class FindDesignerPostsController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update, :show]
+
   def index
     @find_designer_posts = FindDesignerPost.paginate(page: params[:page])
    # @find_designer_posts = FindDesignerPost.all
@@ -25,7 +26,12 @@ class FindDesignerPostsController < ApplicationController
   end
 
   def edit
-    @find_designer_post = FindDesignerPost.find(params[:id])
+    @find_designer_post.user = FindDesignerPost.find(params[:user_id])
+    if current_user?(@find_designer_post.user) 
+      @find_designer_post = FindDesignerPost.find(params[:id])
+    else
+      redirect_to (root_path)
+    end
   end
 
   def update

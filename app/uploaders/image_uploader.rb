@@ -29,7 +29,10 @@ class ImageUploader < CarrierWave::Uploader::Base
  # ファイル名は日本語が入ってくると嫌なので、下記のようにしてみてもいい。
  # 日付(20131001.jpgみたいなファイル名)で保存する
   def filename
-     "#{secure_token}.#{file.extension}" if original_filename.present?
+    time = Time.now
+    name = time.strftime('%Y%m%d%H%M')
+    name2 = name.downcase
+    "profile" + "#{secure_token}" + "#{name2}" + ".#{file.extension}" if original_filename.present?
   end
  
   protected

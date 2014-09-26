@@ -32,7 +32,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     time = Time.now
     name = time.strftime('%Y%m%d%H%M')
     name2 = name.downcase
-    "profile" + "#{secure_token}" + "#{name2}" + ".#{file.extension}" if original_filename.present?
+    "profile_" + "#{secure_token}" + "#{name2}" + ".#{file.extension}" if original_filename.present?
   end
  
   protected

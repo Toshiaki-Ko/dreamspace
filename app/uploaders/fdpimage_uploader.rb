@@ -32,7 +32,7 @@ class FdpimageUploader < CarrierWave::Uploader::Base
     time = Time.now
     name = time.strftime('%Y%m%d%H%M')
     name2 = name.downcase
-    "fdp" + "#{secure_token}" + "#{name2}" + ".#{file.extension}" if original_filename.present?
+    "fdp_" + "#{secure_token}" + "#{name2}" + ".#{file.extension}" if original_filename.present?
   end
  
   protected

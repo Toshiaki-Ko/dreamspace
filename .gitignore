@@ -27,6 +27,7 @@ doc/
 
 # Ignore application configuration
 /config/application.yml
+/config/initializers/carrierwave.rb
 /db/*.csv
 /db/seeds.rb
 

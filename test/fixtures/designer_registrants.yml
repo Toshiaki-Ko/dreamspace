@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  specialty: MyString
+  prefecture: MyString
+  demand: MyText
+  productimage: MyString
+
+two:
+  user_id: 1
+  specialty: MyString
+  prefecture: MyString
+  demand: MyText
+  productimage: MyString

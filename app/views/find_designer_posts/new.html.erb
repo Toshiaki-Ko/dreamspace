@@ -23,7 +23,10 @@
       <%= f.text_area :demand , :size=>"30x8" %>
 
       <%= f.label :fdpimage %>
-      <%= f.file_field :fdpimage %><br>
+      <%= f.file_field :fdpimage %>
+
+      <%= f.label :fdpimage2 %>
+      <%= f.file_field :fdpimage2 %><br>
 
       <%= f.hidden_field :user_id, :value => current_user[:id] %>
 

@@ -1,0 +1,37 @@
+<div class= "select_area">
+<%= link_to "デザインーを待っている\n入り口", 
+	find_designer_posts_path, class: "btn btn-xlagrge btn-primary" %>
+<%= link_to "モデル部屋を待っている\n入り口", designer_registrants_path, 
+	class: "btn btn-xlagrge btn-danger" %><br>
+</div>
+<br>
+<%= link_to "新規投稿", new_designer_registrant_path, 
+	class: "btn btn-xlagrge btn-default" %><br>
+<br>
+<div class= "post_index">
+<%= will_paginate %>
+  <table>
+    <tr>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">design No</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">designer</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">tokuibunya</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">chiku</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">designshitaiheya</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">tourokunichiji</font></th>
+
+    </tr>
+    <% @designer_registrants = DesignerRegistrant.all %>
+    <% @designer_registrants.each do |d| %>
+    <tr>
+      <td bgcolor="#99CC00" valign="center" width="50" height= "70"><%= d.id%></td>
+      <td bgcolor="#FFFFFF" valign="center" width="100"height= "70"><%= d.user.name %></td>
+      <td bgcolor="#FFFFFF" valign="center" width="70"height= "70"><%= d.specialty %></td>
+      <td bgcolor="#99CC00" valign="center" width="100"height= "70"><%= d.prefecture %></td>
+      <td bgcolor="#FFFFFF" valign="center" width="350"height= "70">
+      <%= cut_off(d.demand, 50) %>
+      <%= link_to "[詳しくはこちら]" , designer_registrant_path(:id => d.id) %>
+      </td>
+      <td bgcolor="#99CC00" valign="center" width="100"height= "70"><%= d.created_at %></td>
+    <% end %>
+  </table>
+</div>

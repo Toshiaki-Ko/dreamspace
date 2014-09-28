@@ -12,7 +12,7 @@
     </h2>
     <% if signed_in? %>
      <%= link_to "デザイナーを待っている\n入り口", find_designer_posts_path, class: "btn btn-lagrge btn-primary" %>
-     <%= link_to "モデル部屋を待っている\n入り口", "#", class: "btn btn-lagrge btn-danger" %>
+     <%= link_to "モデル部屋を待っている\n入り口", designer_registrants_path, class: "btn btn-lagrge btn-danger" %>
       <% else %>
         ↓ログイン↓<br>
         <%= link_to "部屋を覗いてみる", signin_path, class: "btn btn-lagrge btn-info" %><br>

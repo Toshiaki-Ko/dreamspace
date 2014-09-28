@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140926152518) do
+ActiveRecord::Schema.define(version: 20140928030042) do
 
   create_table "find_designer_posts", force: true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140926152518) do
     t.datetime "updated_at"
     t.string   "image"
     t.string   "fdpimage"
+    t.string   "fdpimage2"
   end
 
   add_index "find_designer_posts", ["user_id", "created_at"], name: "index_find_designer_posts_on_user_id_and_created_at"

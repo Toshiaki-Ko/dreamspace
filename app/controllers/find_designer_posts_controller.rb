@@ -55,7 +55,8 @@ private
                                                 :prefecture,
                                                 :purpose,
                                                 :demand,
-                                                :fdpimage
+                                                :fdpimage,
+                                                :fdpimage2
                                                 )
   end
 

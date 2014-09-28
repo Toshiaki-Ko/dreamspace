@@ -2,61 +2,58 @@ class DesignerRegistrantsController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update, :show]
 
   def index
-    @find_designer_posts = FindDesignerPost.paginate(page: params[:page])
+    @designer_registrants = DesignerRegistrant.paginate(page: params[:page])
    # @find_designer_posts = FindDesignerPost.all
   end
 
   def new
-    @find_designer_post = FindDesignerPost.new
+    @designer_registrant = DesignerRegistrant.new
   end
 
   def create
-     @find_designer_post = FindDesignerPost.new(find_designer_post_params)
-    if @find_designer_post.save
+     @designer_registrant = DesignerRegistrant.new(designer_registrant_params)
+    if @designer_registrant.save
       flash[:success] = "投稿しました。"
-      redirect_to @find_designer_post
+      redirect_to @designer_registrant
     else
       render 'new'
     end
   end
 
   def show
-    @find_designer_post = FindDesignerPost.find(params[:id])
-    @user = @find_designer_post.user
+    @designer_registrant = DesignerRegistrant.find(params[:id])
+    @user = @designer_registrant.user
   end
 
   def edit
-    @find_designer_post = FindDesignerPost.find(params[:id])
+    @designer_registrant = DesignerRegistrant.find(params[:id])
   end
 
   def update
-    @find_designer_post = FindDesignerPost.find(params[:id])
-    if @find_designer_post.update_attributes(find_designer_post_params)
+    @designer_registrant = DesignerRegistrant.find(params[:id])
+    if @designer_registrant.update_attributes(designer_registrant_params)
       flash[:success] = "更新しました★"
-      redirect_to @find_designer_post
+      redirect_to @designer_registrant
     else
       render 'edit'
     end
   end
 
   def destroy
-      @find_designer_post = FindDesignerPost.find(params[:id])
-      @find_designer_post.destroy
-      redirect_to find_designer_posts_path
+      @designer_registrant = DesignerRegistrant.find(params[:id])
+      @designer_registrant.destroy
+      redirect_to designer_registrants_path
   end
 
 private
 
-  def find_designer_post_params
-    params.require(:find_designer_post).permit( 
+  def designer_registrant_params
+    params.require(:designer_registrant).permit( 
                                                 :user_id,
-                                                :title,
-                                                :area,
+                                                :specialty,
                                                 :prefecture,
-                                                :purpose,
                                                 :demand,
-                                                :fdpimage,
-                                                :fdpimage2
+                                                :productimage
                                                 )
   end
 

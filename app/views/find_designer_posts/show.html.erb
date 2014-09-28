@@ -34,6 +34,15 @@
   </tbody>
 </table>
 
+<div class="show-profile-photo">
+  <%= image_tag @find_designer_post.fdpimage.url, :size => '300x200' %>
+</div>
+
+<div class="show-profile-photo">
+  <%= image_tag @find_designer_post.fdpimage2.url, :size => '300x200' %>
+</div>
+
+
 <br>
 <% if current_user?(@find_designer_post.user) %> 
 <%= link_to "一覧へ", 

@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class ImageUploader < CarrierWave::Uploader::Base  
+class Fdpimage2Uploader < CarrierWave::Uploader::Base
 
  # リサイズしたり画像形式を変更するのに必要
   include CarrierWave::RMagick
@@ -32,7 +32,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     time = Time.now
     name = time.strftime('%Y%m%d%H%M')
     name2 = name.downcase
-    "profile_" + "#{secure_token}" + "#{name2}" + ".#{file.extension}" if original_filename.present?
+    "fdp2_" + "#{secure_token}" + "#{name2}" + ".#{file.extension}" if original_filename.present?
   end
  
   protected
@@ -42,5 +42,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   storage :fog
+
 
 end

@@ -26,12 +26,7 @@ class FindDesignerPostsController < ApplicationController
   end
 
   def edit
-    @find_designer_post.user = FindDesignerPost.find(params[:user_id])
-    if current_user?(@find_designer_post.user) 
-      @find_designer_post = FindDesignerPost.find(params[:id])
-    else
-      redirect_to (root_path)
-    end
+    @find_designer_post = FindDesignerPost.find(params[:id])
   end
 
   def update
@@ -59,7 +54,9 @@ private
                                                 :area,
                                                 :prefecture,
                                                 :purpose,
-                                                :demand
+                                                :demand,
+                                                :fdpimage,
+                                                :fdpimage2
                                                 )
   end
 

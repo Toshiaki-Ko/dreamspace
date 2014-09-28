@@ -18,6 +18,8 @@
       <th bgcolor="#EE0000"><font color="#FFFFFF">部屋のタイプ</font></th>
       <th bgcolor="#EE0000"><font color="#FFFFFF">用途</font></th>
       <th bgcolor="#EE0000"><font color="#FFFFFF">要望</font></th>
+      <th bgcolor="#EE0000"><font color="#FFFFFF">toukounichiji</font></th>
+
     </tr>
     <% @find_designer_posts = FindDesignerPost.all %>
     <% @find_designer_posts.each do |f| %>
@@ -31,6 +33,7 @@
       <%= cut_off(f.demand, 50) %>
       <%= link_to "[詳しくはこちら]" , find_designer_post_path(:id => f.id) %>
       </td>
+      <td bgcolor="#99CC00" valign="center" width="100"height= "70"><%= f.created_at %></td>
     <% end %>
   </table>
 </div>

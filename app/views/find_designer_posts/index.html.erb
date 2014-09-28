@@ -25,7 +25,7 @@
     <% @find_designer_posts.each do |f| %>
     <tr>
       <td bgcolor="#99CC00" valign="center" width="50" height= "70"><%= f.id%></td>
-      <td bgcolor="#99CC00" valign="center" width="150"height= "70"><%= link_to f.title , find_designer_post_path(:id => f.id) %></td>
+      <td bgcolor="#99CC00" valign="center" width="150"height= "70"><%= f.title %></td>
       <td bgcolor="#FFFFFF" valign="center" width="100"height= "70"><%= f.user.name %></td>
       <td bgcolor="#FFFFFF" valign="center" width="70"height= "70"><%= f.area %></td>
       <td bgcolor="#99CC00" valign="center" width="100"height= "70"><%= f.purpose %></td>

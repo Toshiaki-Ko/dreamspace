@@ -22,8 +22,12 @@
       <th>投稿一覧</th>
       <td>
       <% if @find_designer_posts.any? %>
-      合計 <%= @find_designer_posts.count %> 件<br>
-       ここ教えて・・・・・
+        合計 <%= @find_designer_posts.count %> 件<br>
+        <% @find_designer_posts.each do |f| %>
+          <%= link_to f.title, find_designer_post_path(:id => f.id) %>
+        <% end %>
+      <% else %>
+        まだ投稿したことないよ〜
       <% end %>
       </td>
     </tr>

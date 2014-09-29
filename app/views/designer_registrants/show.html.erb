@@ -8,7 +8,7 @@
 
     <tr>
       <th>名前</th>
-      <td><%= @designer_registrant.user.name %></td>
+      <td><%= link_to @designer_registrant.user.name, user_path(:id => @user.id) %></td>
     </tr>
 
     <tr class="introduction-myself">
@@ -28,6 +28,11 @@
 
   </tbody>
 </table>
+
+<div class="show-profile-photo">
+  <%= image_tag @designer_registrant.productimage.url, :size => '300x200' %>
+</div>
+
 
 <br>
 <% if current_user?(@designer_registrant.user) %> 

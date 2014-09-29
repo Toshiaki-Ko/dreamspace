@@ -24,7 +24,7 @@
       <% if @find_designer_posts.any? %>
         合計 <%= @find_designer_posts.count %> 件<br>
         <% @find_designer_posts.each do |f| %>
-          <%= link_to f.title, find_designer_post_path(:id => f.id) %>
+          <%= link_to f.title, find_designer_post_path(:id => f.id) %><br>
         <% end %>
       <% else %>
         まだ投稿したことないよ〜

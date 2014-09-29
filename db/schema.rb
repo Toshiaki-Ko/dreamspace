@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20140928045844) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image"
     t.string   "fdpimage"
     t.string   "fdpimage2"
   end

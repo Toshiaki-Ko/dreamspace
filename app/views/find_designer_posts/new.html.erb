@@ -22,10 +22,10 @@
       <%= f.label :demand, "要求" %>
       <%= f.text_area :demand , :size=>"30x8" %>
 
-      <%= f.label :fdpimage %>
+      <%= f.label :fdpimage, "間取り図" %>
       <%= f.file_field :fdpimage %>
 
-      <%= f.label :fdpimage2 %>
+      <%= f.label :fdpimage2, "部屋の写真" %>
       <%= f.file_field :fdpimage2 %><br>
 
       <%= f.hidden_field :user_id, :value => current_user[:id] %>

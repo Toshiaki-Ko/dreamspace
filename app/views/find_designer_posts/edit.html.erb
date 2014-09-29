@@ -28,8 +28,15 @@
         <%= image_tag @find_designer_post.fdpimage.thumb.url, :size => '200x200' %><br>
       </div>
       <br>
-      <%= f.label :fdpimage, "joukino gazoukoushinsuru?" %>
+      <%= f.label :fdpimage, "上記の間取り図を変更する?" %>
       <%= f.file_field :fdpimage %><br>
+
+      <div class="edit-profile-photo">
+        <%= image_tag @find_designer_post.fdpimage2.thumb.url, :size => '200x200' %><br>
+      </div>
+      <br>
+      <%= f.label :fdpimage2, "上記の部屋の写真を変更する?" %>
+      <%= f.file_field :fdpimage2 %><br>
 
       <br>
 

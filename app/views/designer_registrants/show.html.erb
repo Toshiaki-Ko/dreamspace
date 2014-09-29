@@ -2,17 +2,17 @@
   <tbody>
 
     <tr>
-      <th>designer id</th>
+      <th>デザイナー　ID</th>
       <td><%= @designer_registrant.id %></td>
     </tr>
 
     <tr>
-      <th>designer</th>
+      <th>名前</th>
       <td><%= @designer_registrant.user.name %></td>
     </tr>
 
     <tr class="introduction-myself">
-      <th>tokuibunya</th>
+      <th>得意分野</th>
     　<td><%=  @designer_registrant.specialty %></td>
     </tr>
 
@@ -22,7 +22,7 @@
     </tr>
 
     <tr>
-      <th>要求</th>
+      <th>デザインしてみたい部屋</th>
       <td><%= simple_format @designer_registrant.demand %></td>
     </tr>
 
@@ -31,13 +31,13 @@
 
 <br>
 <% if current_user?(@designer_registrant.user) %> 
-<%= link_to "一覧へ", 
-   designer_registrants_path, class: "btn btn-xlagrge btn-primary btn-group" %>
-<%= link_to "編集する", edit_designer_registrant_path, 
-  class: "btn btn-xlagrge btn-success btn-group" %>
-<%= link_to "削除", @designer_registrant, method: :delete, data: { confirm: "本当に削除ですか" }, class: "btn btn-xlagrge btn-danger btn-group" %>
+  <%= link_to "一覧へ", 
+    designer_registrants_path, class: "btn btn-xlagrge btn-primary btn-group" %>
+  <%= link_to "編集する", edit_designer_registrant_path, 
+    class: "btn btn-xlagrge btn-success btn-group" %>
+  <%= link_to "削除", @designer_registrant, method: :delete, data: { confirm: "本当に削除ですか" }, class: "btn btn-xlagrge btn-danger btn-group" %>
 <% else %>  
-<%= link_to "一覧へ", 
-  designer_registrants_path, class: "btn btn-xlagrge btn-primary btn-group" %>
+  <%= link_to "一覧へ", 
+    designer_registrants_path, class: "btn btn-xlagrge btn-primary btn-group" %>
 <% end %>
 

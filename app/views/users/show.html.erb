@@ -22,9 +22,16 @@
       <th>投稿一覧</th>
       <td>
       <% if @find_designer_posts.any? %>
-        合計 <%= @find_designer_posts.count %> 件<br>
+        合計 <%= @find_designer_posts.count + @designer_registrants.count %> 件<br>
+
+        デザインしてもらいたい部屋　<%= @find_designer_posts.count %> 件<br>
         <% @find_designer_posts.each do |f| %>
-          <%= link_to f.title, find_designer_post_path(:id => f.id) %><br>
+        <%= link_to f.title, find_designer_post_path(:id => f.id) %><br>
+        <br>
+        <% end %>
+        モデルを募集中は　<%= @designer_registrants.count %> 件<br>
+        <% @designer_registrants.each do |d| %>
+        <%= link_to d.specialty, designer_registrant_path(:id => d.id) %>
         <% end %>
       <% else %>
         まだ投稿したことないよ〜

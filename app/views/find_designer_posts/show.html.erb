@@ -31,6 +31,11 @@
       <td><%= simple_format @find_designer_post.demand %></td>
     </tr>
 
+    <tr>
+      <th>連絡先</th>
+      <td><%= mail_to (@find_designer_post.user.email), '連絡先' %></td>
+    </tr>
+
   </tbody>
 </table>
 

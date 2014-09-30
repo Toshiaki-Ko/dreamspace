@@ -11,9 +11,6 @@
       <%= f.label :email, "連絡先(Email)" %>
       <%= f.text_field :email %>
 
-      <%= f.label :password, "パスワード" %>
-      <%= f.password_field :password %>
-
       <%= f.label :introduction, "自己紹介" %>
       <%= f.text_area :introduction , :size=>"30x8" %>
 
@@ -21,11 +18,14 @@
         <%= image_tag @user.image.thumb.url, :size => '200x200' %><br>
       </div>
       <br>
-      <%= f.label :image, "joukino gazoukoushinsuru?" %>
+      <%= f.label :image, "プロフィール画像を更新する?" %>
       <%= f.file_field :image %><br>
-
+      <%= f.label :password, "確認のためパスワードを入力してください" %>
+      <%= f.password_field :password %>
       <br>
       <%= f.submit "更新する", class: "btn btn-large btn-info" %>
+      <%= link_to "また今度", find_designer_posts_path, 
+       class: "btn btn-large btn-danger" %><br>
     <% end %>
   </div>
 </div>

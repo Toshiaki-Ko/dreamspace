@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :users
   resources :find_designer_posts
-  
+  resources :designer_registrants
+
   resources :sessions, only: [:new, :create, :destroy]
 
   root'staticpages#home'

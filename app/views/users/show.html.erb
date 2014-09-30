@@ -1,7 +1,7 @@
 <div class= "select_area">
 <%= link_to "デザインーを待っている\n入り口", 
   find_designer_posts_path, class: "btn btn-xlagrge btn-primary" %>
-<%= link_to "モデル部屋を待っている\n入り口", "#", 
+<%= link_to "モデル部屋を待っている\n入り口", designer_registrants_path, 
   class: "btn btn-xlagrge btn-danger" %><br>
 </div>
 <table class="profile-form">
@@ -22,8 +22,12 @@
       <th>投稿一覧</th>
       <td>
       <% if @find_designer_posts.any? %>
-      合計 <%= @find_designer_posts.count %> 件<br>
-       ここ教えて・・・・・
+        合計 <%= @find_designer_posts.count %> 件<br>
+        <% @find_designer_posts.each do |f| %>
+          <%= link_to f.title, find_designer_post_path(:id => f.id) %><br>
+        <% end %>
+      <% else %>
+        まだ投稿したことないよ〜
       <% end %>
       </td>
     </tr>

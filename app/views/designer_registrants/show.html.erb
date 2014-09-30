@@ -1,0 +1,48 @@
+<table class="profile-form">
+  <tbody>
+
+    <tr>
+      <th>デザイナー　ID</th>
+      <td><%= @designer_registrant.id %></td>
+    </tr>
+
+    <tr>
+      <th>名前</th>
+      <td><%= link_to @designer_registrant.user.name, user_path(:id => @user.id) %></td>
+    </tr>
+
+    <tr class="introduction-myself">
+      <th>得意分野</th>
+    　<td><%=  @designer_registrant.specialty %></td>
+    </tr>
+
+    <tr>
+      <th>都道府県</th>
+      <td><%= @designer_registrant.prefecture %></td>
+    </tr>
+
+    <tr>
+      <th>デザインしてみたい部屋</th>
+      <td><%= simple_format @designer_registrant.demand %></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="show-profile-photo">
+  <%= image_tag @designer_registrant.productimage.url, :size => '300x200' %>
+</div>
+
+
+<br>
+<% if current_user?(@designer_registrant.user) %> 
+  <%= link_to "一覧へ", 
+    designer_registrants_path, class: "btn btn-xlagrge btn-primary btn-group" %>
+  <%= link_to "編集する", edit_designer_registrant_path, 
+    class: "btn btn-xlagrge btn-success btn-group" %>
+  <%= link_to "削除", @designer_registrant, method: :delete, data: { confirm: "本当に削除ですか" }, class: "btn btn-xlagrge btn-danger btn-group" %>
+<% else %>  
+  <%= link_to "一覧へ", 
+    designer_registrants_path, class: "btn btn-xlagrge btn-primary btn-group" %>
+<% end %>
+

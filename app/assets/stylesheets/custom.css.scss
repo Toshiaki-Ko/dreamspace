@@ -102,6 +102,7 @@ p {
 /* footer */
 
 footer {
+position: relative;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
@@ -166,18 +167,17 @@ input {
 }
 
 .select_area {
-padding-left: 160px;
+padding-left: 30px;
+margin-bottom: 3px0px;
 }
 
 .profile-form{
-width: 600px;
+width: 645px;
 border-collapse: separate;
-border-spacing: 0px;
 border-top: 1px solid #ccc;
 border-left: 1px solid #ccc;
 margin-top: 30px;
-margin-left: 20px;
-margin-right: 60px;
+
 
 }
 
@@ -215,3 +215,40 @@ border-bottom: 1px solid #ccc;
 .btn-group {
   margin-left: 130px;
 }
+
+.room-photo{
+  border: 1px solid;
+  background-color: rgba(245,245,245,0.8);
+}
+
+.show-room-photo{
+  margin: 10px;
+}
+
+.show-room-photo2{
+  margin: 10px;
+}
+
+.button {
+  margin-left: 150px;
+}
+
+.button2 {
+  margin-left: 250px;
+}
+
+.post_index {
+  text-align: center;
+  background-color: rgba(245,245,245,0.8);
+}
+
+.post_index th {
+  background-color: #EE0000;
+  color: #FFFFFF;
+}
+
+.post_index td{
+  
+}
+
+

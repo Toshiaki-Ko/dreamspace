@@ -1,4 +1,4 @@
-<table class="profile-form">
+<table class="profile-form" table align="center">
   <tbody>
 
     <tr>
@@ -38,17 +38,28 @@
 
   </tbody>
 </table>
+<br>
+<table class="room-photo" table align="center">
 
-<div class="show-room-photo">
-  <%= image_tag @find_designer_post.fdpimage.url, :size => '300x200' %>
-</div>
-
-<div class="show-room-photo2">
-  <%= image_tag @find_designer_post.fdpimage2.url, :size => '300x200' %>
-</div>
-
+  <tr>
+    <td>
+      <div class="show-room-photo">
+        <%= image_tag @find_designer_post.fdpimage.url, :size => '300x200' %>
+      </div>
+    </td>
+    <td>
+      <div class="show-room-photo2">
+        <%= image_tag @find_designer_post.fdpimage2.url, :size => '300x200' %>
+      </div>
+    </td>
+  </tr>
+    <th>間取り図</th>
+    <th>部屋の写真</th>
+</table>
 
 <br>
+
+<div class= "button">
 <% if current_user?(@find_designer_post.user) %> 
 <%= link_to "一覧へ", 
   find_designer_posts_path, class: "btn btn-xlagrge btn-primary btn-group" %>
@@ -56,7 +67,10 @@
   class: "btn btn-xlagrge btn-success btn-group" %>
 <%= link_to "削除", @find_designer_post, method: :delete, data: { confirm: "本当に削除ですか" }, class: "btn btn-xlagrge btn-danger btn-group" %>
 <% else %>  
+<div class= "button2">
 <%= link_to "一覧へ", 
   find_designer_posts_path, class: "btn btn-xlagrge btn-primary btn-group" %>
 <% end %>
+</div>
+</div>
 

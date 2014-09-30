@@ -14,7 +14,7 @@
       <%= d.label :demand, "要求" %>
       <%= d.text_area :demand , :size=>"30x8" %>
 
-      <%= d.label :productimage %>
+      <%= d.label :productimage, "作品例" %>
       <%= d.file_field :productimage %><br>
 
       <%= d.hidden_field :user_id, :value => current_user[:id] %>

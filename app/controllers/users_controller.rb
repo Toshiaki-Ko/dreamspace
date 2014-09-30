@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @find_designer_posts = @user.find_designer_posts
+    @designer_registrants = @user.designer_registrants
   end
 
    def create

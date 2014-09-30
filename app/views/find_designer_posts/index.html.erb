@@ -4,10 +4,11 @@
 <%= link_to "モデル部屋を待っている\n入り口", designer_registrants_path, 
 	class: "btn btn-xlagrge btn-danger" %><br>
 </div>
+<br>
 <div class= "post_index">
 <%= will_paginate %>
-  <table>
-    <tr>
+  <table class= "table table-striped table-bordered table-hover">
+    <tr class="success">
       <th>投稿No</th>
       <th>タイトル</th>
       <th>投稿者</th>
@@ -20,12 +21,12 @@
     <% @find_designer_posts = FindDesignerPost.all %>
     <% @find_designer_posts.each do |f| %>
     <tr>
-      <td valign="center" width="70" height= "70"><%= f.id%></td>
-      <td valign="center" width="150"height= "70"><%= f.title %></td>
-      <td valign="center" width="100"height= "70"><%= f.user.name %></td>
-      <td valign="center" width="70"height= "70"><%= f.area %></td>
-      <td valign="center" width="100"height= "70"><%= f.purpose %></td>
-      <td valign="center" width="350"height= "70">
+      <td width="70" height= "70"><%= f.id%></td>
+      <td width="150"height= "70"><%= f.title %></td>
+      <td width="100"height= "70"><%= f.user.name %></td>
+      <td width="70"height= "70"><%= f.area %></td>
+      <td width="100"height= "70"><%= f.purpose %></td>
+      <td width="350"height= "70">
       <%= cut_off(f.demand, 50) %>
       <%= link_to "[詳しくはこちら]" , find_designer_post_path(:id => f.id) %>
       </td>

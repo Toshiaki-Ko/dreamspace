@@ -27,8 +27,8 @@
       <td width="70"height= "70"><%= f.area %></td>
       <td width="100"height= "70"><%= f.purpose %></td>
       <td width="350"height= "70">
-      <%= cut_off(f.demand, 50) %>
-      <%= link_to "[詳しくはこちら]" , find_designer_post_path(:id => f.id) %>
+      <%= cut_off(f.demand, 80) %>
+      <%= link_to "[詳細]" , find_designer_post_path(:id => f.id) %>
       </td>
       <td valign="center" width="100"height= "70"><%= f.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
     </tr>

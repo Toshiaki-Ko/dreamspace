@@ -1,9 +1,11 @@
-<table class="profile-form">
+<table class="profile-form3" align="center">
   <tbody>
 
     <tr>
       <th>デザイナー　ID</th>
       <td><%= @designer_registrant.id %></td>
+      <td rowspan="5" align="center"><%= image_tag @designer_registrant.productimage.url, :size => '400x200' %>
+
     </tr>
 
     <tr>
@@ -28,13 +30,8 @@
 
   </tbody>
 </table>
-
-<div class="show-profile-photo">
-  <%= image_tag @designer_registrant.productimage.url, :size => '300x200' %>
-</div>
-
-
 <br>
+<div class= "button3">
 <% if current_user?(@designer_registrant.user) %> 
   <%= link_to "一覧へ", 
     designer_registrants_path, class: "btn btn-xlagrge btn-primary btn-group" %>
@@ -42,7 +39,11 @@
     class: "btn btn-xlagrge btn-success btn-group" %>
   <%= link_to "削除", @designer_registrant, method: :delete, data: { confirm: "本当に削除ですか" }, class: "btn btn-xlagrge btn-danger btn-group" %>
 <% else %>  
+<div class="button4">
   <%= link_to "一覧へ", 
     designer_registrants_path, class: "btn btn-xlagrge btn-primary btn-group" %>
 <% end %>
+</div>
+</div>
+
 

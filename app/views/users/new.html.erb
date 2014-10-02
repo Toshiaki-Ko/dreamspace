@@ -1,6 +1,8 @@
 <% provide(:title, 'Sign up') %>
 <h1>登録ページ</h1>
-
+<h7>空欄を全て記入してくださいね〜</h7>
+<br>
+<br>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
@@ -25,6 +27,8 @@
       <%= f.file_field :image %><br>
 
       <%= f.submit "登録する", class: "btn btn-large btn-info" %>
+      <%= link_to "また今度", root_path, 
+       class: "btn btn-large btn-danger" %><br>
     <% end %>
   </div>
 </div>

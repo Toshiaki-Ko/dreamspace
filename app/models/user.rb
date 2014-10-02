@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   has_many :find_designer_posts, dependent: :destroy
-  has_one  :designer_registrant, dependent: :destroy
+  has_many  :designer_registrants, dependent: :destroy
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 

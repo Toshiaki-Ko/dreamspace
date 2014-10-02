@@ -1,14 +1,15 @@
-<div class= "select_area">
+<div class= "select_area" align="center">
 <%= link_to "デザインーを待っている\n入り口", 
   find_designer_posts_path, class: "btn btn-xlagrge btn-primary" %>
 <%= link_to "モデル部屋を待っている\n入り口", designer_registrants_path, 
   class: "btn btn-xlagrge btn-danger" %><br>
 </div>
-<table class="profile-form">
+<table class="profile-form" align="center">
   <tbody>
     <tr>
       <th>名前</th>
       <td><%= @user.name %></td>
+      <td rowspan="4" align="center" margin="0">  <%= image_tag @user.image.thumb.url, :size => '300x200' %>
     </tr>
     <tr>
       <th>連絡先</th>
@@ -22,17 +23,22 @@
       <th>投稿一覧</th>
       <td>
       <% if @find_designer_posts.any? %>
-        合計 <%= @find_designer_posts.count %> 件<br>
+        合計 <%= @find_designer_posts.count + @designer_registrants.count %> 件<br>
+
+        デザインしてもらいたい部屋　<%= @find_designer_posts.count %> 件<br>
         <% @find_designer_posts.each do |f| %>
-          <%= link_to f.title, find_designer_post_path(:id => f.id) %><br>
+        <%= link_to f.title, find_designer_post_path(:id => f.id) %><br>
+        <br>
+        <% end %>
+        モデルを募集中は　<%= @designer_registrants.count %> 件<br>
+        <% @designer_registrants.each do |d| %>
+        <%= link_to d.specialty, designer_registrant_path(:id => d.id) %>
         <% end %>
       <% else %>
         まだ投稿したことないよ〜
       <% end %>
       </td>
+</td>
     </tr>
   </tbody>
 </table>
-<div class="show-profile-photo">
-  <%= image_tag @user.image.thumb.url, :size => '200x200' %>
-</div>

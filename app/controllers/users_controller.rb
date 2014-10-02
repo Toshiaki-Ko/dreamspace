@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update, :show]
-  before_action :correct_user, only: [:show, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
   def new
   	@user = User.new
   end
@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @find_designer_posts = @user.find_designer_posts
+    @designer_registrants = @user.designer_registrants
   end
 
    def create

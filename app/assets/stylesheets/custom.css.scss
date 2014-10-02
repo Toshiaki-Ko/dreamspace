@@ -55,7 +55,7 @@ border-radius: 6px;
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, h7 {
   line-height: 1;
 }
 
@@ -73,6 +73,14 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: gray;
+}
+
+h7 {
+  letter-spacing: -2px;
+  margin-bottom: 150px;
+  text-align: center;
+  margin-left: 240px;
+  color: red;
 }
 
 p {
@@ -102,6 +110,7 @@ p {
 /* footer */
 
 footer {
+position: relative;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
@@ -117,7 +126,6 @@ footer a:hover {
 }
 
 footer small {
-  float: left;
 }
 
 footer ul {
@@ -166,26 +174,26 @@ input {
 }
 
 .select_area {
-padding-left: 160px;
+padding-left: 30px;
+margin-bottom: 3px0px;
 }
 
 .profile-form{
-width: 600px;
+width: 1000px;
 border-collapse: separate;
-border-spacing: 0px;
 border-top: 1px solid #ccc;
 border-left: 1px solid #ccc;
 margin-top: 30px;
-margin-left: 20px;
-margin-right: 60px;
+
 
 }
 
 .profile-form th{
+height: 80px;
 width: 100px;
 padding:4px;
-text-align: center;
-vertical-align: top;
+align: center;
+valign: center;
 color: #444;
 background-color: #feedf3;
 border-left: 3px double #999;
@@ -195,6 +203,7 @@ border-bottom: 1px solid #ccc;
 }
 
 .profile-form td{
+width: 500px;
 padding:4px;
 background-color: rgba(245,245,245,0.3);
 border-right: 1px solid #ccc;
@@ -210,10 +219,115 @@ border-bottom: 1px solid #ccc;
 }
 
 .show-profile-photo {
-  border: 3px solid #ccc;
-  float: right;
 }
 
 .btn-group {
   margin-left: 130px;
 }
+
+.room-photo{
+  width: 800px;
+  border: 1px solid;
+  background-color: rgba(245,245,245,0.8);
+}
+
+.show-room-photo{
+  margin: 10px;
+  margin-left: 50px;
+}
+
+.show-room-photo2{
+  align: center;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+.button {
+  margin-left: 150px;
+}
+
+.button2 {
+  margin-left: 130px;
+}
+
+.table-bordered th {
+  color: black;
+}
+
+.post_index td{
+  background-color: rgba(102,205,170,0.2);;
+}
+
+.button3 {
+  margin-left: 180px;
+}
+
+.button4 {
+  margin-left: 100px;
+}
+
+.profile-form2{
+height: 400px;
+width: 800px;
+border-collapse: separate;
+border-top: 1px solid #ccc;
+border-left: 1px solid #ccc;
+margin-top: 30px;
+
+
+}
+
+.profile-form2 th{
+align: center;
+valign: center;
+width: 100px;
+padding:4px;
+color: #444;
+background-color: #feedf3;
+border-left: 3px double #999;
+border-top: 1px solid #fff;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+.profile-form2 td{
+height: 40px;
+padding:4px;
+background-color: rgba(245,245,245,0.3);
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+.profile-form3{
+height: 400px;
+width: 1000px;
+border-collapse: separate;
+border-top: 1px solid #ccc;
+border-left: 1px solid #ccc;
+margin-top: 30px;
+
+
+}
+
+.profile-form3 th{
+align: center;
+valign: center;
+width: 100px;
+padding:4px;
+color: #444;
+background-color: #feedf3;
+border-left: 3px double #999;
+border-top: 1px solid #fff;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+.profile-form3 td{
+width: 400px;
+height: 40px;
+padding:4px;
+background-color: rgba(245,245,245,0.3);
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+

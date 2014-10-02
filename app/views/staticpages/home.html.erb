@@ -6,22 +6,20 @@
       ★ドリスペ★へ<br>
       ようこそ
     </h1>
-
     <h3>
-      インテリア専攻の学生も見てみてね♪<br>
+      インテリア専攻の学生も絶賛募集中♪
     </h3>
-
     <% if signed_in? %>
       <%= link_to "デザイナーを待っている\n入り口", find_designer_posts_path, class: "btn btn-lagrge btn-primary" %>
-      <%= link_to "モデル部屋を待っている\n入り口", designer_registrants_path, class: "btn btn-lagrge btn-danger" %>
+      <%= link_to "モデル部屋をさがしいる\n入り口", designer_registrants_path, class: "btn btn-lagrge btn-danger" %>
     <% else %>
-      <%= link_to "ドリスペってどういうサイトですか？", about_path %><br>
-      <br>
       ログイン↓<br>
-      <%= link_to "ログインして部屋を覗いてみてね", signin_path, class: "btn btn-lagrge btn-info" %><br>
-      <br>
+      <%= link_to "部屋を覗いてみてね", signin_path, class: "btn btn-lagrge btn-info" %><br>
       ↓また登録していない方はこちら↓<br>
-      <%= link_to "どりすぺに加入する", signup_path, class: "btn btn-lagrge btn-warning" %>
+      <%= link_to "どりすぺに加入する", signup_path, class: "btn btn-lagrge btn-warning" %><br>
+      <br>
+      <%= link_to "ドリスペってどういうサイトですか？", about_path %>
+
     <% end %>
   </div>
 </div>

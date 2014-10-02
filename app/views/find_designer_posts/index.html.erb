@@ -1,7 +1,8 @@
+<h1>デザイナーを待っている部屋リスト</h1>
 <div class= "select_area">
 <%= link_to "新規投稿", new_find_designer_post_path, 
   class: "btn btn-xlagrge btn-default" %>
-<%= link_to "モデル部屋を待っている\n入り口", designer_registrants_path, 
+<%= link_to "デザイナー登録リストへ", designer_registrants_path, 
 	class: "btn btn-xlagrge btn-danger" %><br>
 </div>
 <br>
@@ -27,7 +28,7 @@
       <td width="70"height= "70"><%= f.area %></td>
       <td width="100"height= "70"><%= f.purpose %></td>
       <td width="350"height= "70">
-      <%= cut_off(f.demand, 80) %>
+      <%= cut_off(f.demand, 50) %>
       <%= link_to "[詳細]" , find_designer_post_path(:id => f.id) %>
       </td>
       <td valign="center" width="100"height= "70"><%= f.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></td>

@@ -43,6 +43,18 @@ background-color:  rgba(0, 85, 20, 0.1);
 border-radius: 6px;
 }
 
+.hero-unit2 {
+padding-top: 80px;
+padding-bottom: 80px;
+margin-bottom: 30px;
+background-repeat: no-repeat;
+background-position: 50% 50%; 
+background-size:800px 500px;
+background-color:  rgba(0, 85, 20, 0.1);
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}
 
 .home{
   color: gray;
@@ -92,7 +104,7 @@ p {
 /* header */
 
 #logo {
-  float: right;
+  float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: black;

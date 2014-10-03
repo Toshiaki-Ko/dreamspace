@@ -1,1 +1,57 @@
-about page
+<div class="center hero-unit2">
+  <div class="home">
+    <h1>
+      ドリームスペースは<br>
+      どんなサイト？<br>
+    </h1>
+    <br>
+    <h2>
+      <font color="red">一人暮らしの方</font>と<font color="red">インテリア専攻学生<br></font>
+      のためのサイト
+    </h2>
+    <table class="room-photo" table align="center">
+    <tr>
+    <td>
+    <h3>
+      <font color="blue">一人暮らしの方</font>へ<br>
+      部屋の<br>
+      <font color="purple">基本データ</font><br>
+      <font color="purple">写真</font><br>
+      <font color="purple">あなたの要望</font><br>
+      <font color="purple">予算</font><br>
+      をアップロードするだけで<br>
+      インテリア専攻学生がデザインしてくれて、<br>
+      <font color="red">一人暮らしを満喫する</font>サービスです<br>
+    </h3>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <br>
+    <h3>
+      <font color="blue">インテリア専攻学生の方</font>へ<br>
+      学校では勉強したけど、<font color="purple">モデル部屋がない</font><br>
+      とか<br>
+      モデル部屋あるけど、<font color="purple">材料費とか大変。。</font><br>
+      とか<br>   
+      就職活動の時、<font color="purple">実際モデルをデザインしたことある？</font><br>
+      と聞かれて、「ありません」しかいえなかった。。<br>
+    </h3>
+    </td>
+    </tr>
+    </table>
+    <br>
+    <% if signed_in? %>
+      <%= link_to "デザイナーを待っている\n入り口", find_designer_posts_path, class: "btn btn-lagrge btn-primary" %>
+      <%= link_to "モデル部屋をさがしいる\n入り口", designer_registrants_path, class: "btn btn-lagrge btn-danger" %>
+      <br>
+    <% else %>
+
+      <%= link_to "ログイン", signin_path, class: "btn btn-lagrge btn-info" %>
+
+      <%= link_to "加入する", signup_path, class: "btn btn-lagrge btn-warning" %>
+      <br>
+
+    <% end %>
+  </div>
+</div>

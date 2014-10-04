@@ -56,6 +56,14 @@ background-color:  rgba(0, 85, 20, 0.1);
 border-radius: 6px;
 }
 
+.center2 {
+  text-align: center;
+}
+
+.center2 h1 {
+  margin-bottom: 10px;
+}
+
 .home{
   color: gray;
   font-size: 18px;
@@ -198,8 +206,7 @@ border-collapse: separate;
 border-top: 1px solid #ccc;
 border-left: 1px solid #ccc;
 margin-top: 30px;
-
-
+background-color: rgba(245,245,245,0.3);
 }
 
 .profile-form th{
@@ -319,8 +326,7 @@ border-collapse: separate;
 border-top: 1px solid #ccc;
 border-left: 1px solid #ccc;
 margin-top: 30px;
-
-
+background-color: rgba(245,245,245,0.3);
 }
 
 .profile-form3 th{

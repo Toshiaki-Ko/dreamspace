@@ -2,8 +2,7 @@ class DesignerRegistrantsController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update, :show]
 
   def index
-    @designer_registrants = DesignerRegistrant.paginate(page: params[:page])
-   # @find_designer_posts = FindDesignerPost.all
+    @designer_registrants = DesignerRegistrant.paginate(page: params[:page], per_page: 10)
   end
 
   def new

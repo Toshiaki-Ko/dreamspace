@@ -16,7 +16,7 @@
       <%= d.label :demand, "デザインしてみたい部屋" %>
       <%= d.text_area :demand , :size=>"30x8"%>
 
-      <%= d.label :productimage, "作品例" %>
+      <%= d.label :productimage, "作品例または自宅の写真" %>
       <%= d.file_field :productimage %><br>
 
       <%= d.hidden_field :user_id, :value => current_user[:id] %>

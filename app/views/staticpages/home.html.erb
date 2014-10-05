@@ -10,8 +10,12 @@
       インテリア専攻の学生も絶賛募集中♪
     </h3>
     <% if signed_in? %>
-      <%= link_to "デザイナーを待っている\n入り口", find_designer_posts_path, class: "btn btn-lagrge btn-primary" %>
-      <%= link_to "モデル部屋をさがしいる\n入り口", designer_registrants_path, class: "btn btn-lagrge btn-danger" %>
+      <br>
+      部屋をおしゃれにしたい方は <font color="blue"> 青いボタン </font><br>
+      デザイナーリストに登録したい方は <font color="red"> 赤いボタン </font><br>
+      <br>
+      <%= link_to "デザイナーを探している方\n入り口", find_designer_posts_path, class: "btn btn-lagrge btn-primary" %>
+      <%= link_to "モデル部屋を探している方\n入り口", designer_registrants_path, class: "btn btn-lagrge btn-danger" %>
     <% else %>
       ログイン↓<br>
       <%= link_to "部屋を覗いてみてね", signin_path, class: "btn btn-lagrge btn-info" %><br>

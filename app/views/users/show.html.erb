@@ -13,7 +13,11 @@
     </tr>
     <tr>
       <th>連絡先</th>
-      <td><%= mail_to @user.email %></td>
+      <% if current_user?(@user) %>
+      <td><%= mail_to @user.email, @user.email, :encode => 'javascript'%></td>
+      <% else %>
+      <td><%= mail_to @user.email, '連絡先', :encode => 'javascript'%></td>
+      <% end %>
     </tr>
     <tr class="introduction-myself">
       <th>自己紹介</th>
@@ -22,7 +26,7 @@
     <tr class="posts-all-in-profile">
       <th>投稿一覧</th>
       <td>
-      <% if @find_designer_posts.any? %>
+      <% if @find_designer_posts.any? or @designer_registrants.any? %>
         合計 <%= @find_designer_posts.count + @designer_registrants.count %> 件<br>
 
         デザインしてもらいたい部屋　<%= @find_designer_posts.count %> 件<br>

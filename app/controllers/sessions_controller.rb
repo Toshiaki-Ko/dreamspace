@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_to root_url
     else
-      flash.now[:error] = '間違ってるところあるよん'
+      flash.now[:error] = '間違ってるところがありますよ'
       render 'new'
     end
   end

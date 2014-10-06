@@ -1,0 +1,95 @@
+<div class="center2 hero-unit2">
+  <div class="home">
+    <h1>
+      ★どりーむすぺーす★は<br>
+      どんなサイト？<br>
+    </h1>
+    <br>
+    <h2>
+      <font color="red">一人暮らしの方</font>と<font color="red">インテリア専攻学生<br></font>
+      のためのサイト
+    </h2>
+    <table class="room-photo" table align="center">
+    <tr>
+    <td>
+      -------------------------------------------------------------------------------------------------------
+    <h3>
+      <font color="blue">一人暮らしの方</font>へ<br>
+    </h3>
+    ↓↓↓↓↓
+    <h4>
+      部屋の<br>
+      <font color="green">基本データ</font><br>
+      <font color="green">写真</font><br>
+      <font color="green">あなたの要望</font><br>
+      <font color="green">予算</font><br>
+      をアップロードするだけで<br>
+      インテリア専攻学生がデザインしてくれて、<br>
+      <font color="red">一人暮らしを満喫する</font>サービスです<br>
+    </h4>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <br>
+      -------------------------------------------------------------------------------------------------------
+    <h3>
+      <font color="blue">インテリア専攻学生の方</font>へ<br>
+    </h3>
+    ↓↓↓↓↓
+    <h4>
+      <font color="green">モデル部屋がない</font><br>
+      とか
+      <br>
+      <font color="green">材料費とか大変</font><br>
+      とか
+      <br>   
+      <font color="green">
+      実際モデルをデザインしたないと就職に不利
+      </font><br>
+      などのことございませんか？<br>
+    </h4>
+      課題提出の時、暇な時に<br>
+      こちらに登録しているモデル部屋をデザインして、採用していただくと<br>
+      実際の部屋をデザインをした経験になり、<br>
+      <font color="red">就職活動の時のアピールポイント</font>　や　
+      <font color="red">将来デザイナーとしてのキャリア</font><br>
+      に良い経験になる
+      <br>
+    <br>
+    -------------------------------------------------------------------------------------------------------
+    <h3>
+      ★どりーむすぺーす★は
+      <font color="red">　無料　</font>
+      です
+    </h3>
+    <h4>
+      しかし、デザイン料金の有無は<br>
+      ユーザとデザイナー学生の<font color="red">話し合い</font>で決めてね♪<br>
+      <br>
+      素敵なデザインをしてくれたら、<br>
+      感謝な気持ちでお礼をしても良いし<br>
+      <br>
+      モデル部屋を提供してくれたから、ありがたい気持ちを忘れなく、<br>
+      感謝の気持ちを表しましょうね♪<br>
+      <br>
+    </h4>
+    -------------------------------------------------------------------------------------------------------
+    </td>
+    </tr>
+    </table>
+    <br>
+    <% if signed_in? %>
+      <%= link_to "デザイナーを待っている\n入り口", find_designer_posts_path, class: "btn btn-lagrge btn-primary" %>
+      <%= link_to "モデル部屋をさがしいる\n入り口", designer_registrants_path, class: "btn btn-lagrge btn-danger" %>
+      <br>
+    <% else %>
+
+      <%= link_to "ログイン", signin_path, class: "btn btn-lagrge btn-info" %>
+
+      <%= link_to "加入する", signup_path, class: "btn btn-lagrge btn-warning" %>
+      <br>
+
+    <% end %>
+  </div>
+</div>

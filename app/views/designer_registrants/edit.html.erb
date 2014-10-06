@@ -14,13 +14,18 @@
       <%= d.label :demand, "要求" %>
       <%= d.text_area :demand , :size=>"30x8" %>
 
-      <%= d.label :productimage, "作品例" %>
+      <div class="edit-profile-photo">
+        <%= image_tag @designer_registrant.productimage.thumb.url, :size => '200x200' %><br>
+      </div>
+      <br>
+
+      <%= d.label :productimage, "もっと気になる作品例に変更する？" %>
       <%= d.file_field :productimage %><br>
 
       <%= d.hidden_field :user_id, :value => current_user[:id] %>
 
       <%= d.submit "編集する", class: "btn btn-large btn-info" %>
-      <%= link_to "また今度", designer_registrants_path, 
+      <%= link_to "また今度", designer_registrant_path, 
        class: "btn btn-large btn-danger" %><br>
     <% end %>
   </div>

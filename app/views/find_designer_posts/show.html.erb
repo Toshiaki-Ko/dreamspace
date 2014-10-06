@@ -1,6 +1,5 @@
-<table class="profile-form2" table align="center">
+  <table class="profile-form2" table align="center">
   <tbody>
-
     <tr>
       <th>タイトル</th>
       <td><%= @find_designer_post.title %></td>
@@ -28,17 +27,17 @@
 
     <tr>
        <th>予算</th>
-+      <td><%= @find_designer_post.budget %></td>
-+    </tr>
-+
-+    <tr>
+      <td><%= @find_designer_post.budget %></td>
+    </tr>
+
+    <tr>
       <th>要求</th>
       <td><%= simple_format @find_designer_post.demand %></td>
     </tr>
 
     <tr>
       <th>連絡先</th>
-      <td><%= mail_to (@find_designer_post.user.email), '連絡先' %></td>
+      <td><%= mail_to (@find_designer_post.user.email), '連絡先', :encode => 'javascript' %></td>
     </tr>
 
   </tbody>
